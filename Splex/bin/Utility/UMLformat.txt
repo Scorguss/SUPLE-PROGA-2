@@ -1,0 +1,133 @@
+Formato uml de la aplicacion
+@startuml
+
+class App {
+    +main(args: String[])
+}
+
+App --|> LectorTXT
+App --|> LoginApp
+
+@enduml
+@startuml
+
+class LoginApp {
+    -MAX_INTENTOS: int
+    -intentosRestantes: int
+    -contraseña: String
+    +verifyLogin(username: String, password: String): boolean
+    -md5(input: String): String
+    +ingreso(): String
+    +getContraseña(): String
+}
+
+class Scanner {
+    // Métodos y atributos de la clase Scanner
+}
+
+class Connection {
+    // Métodos y atributos de la clase Connection
+}
+
+class DriverManager {
+    // Métodos y atributos de la clase DriverManager
+}
+
+class PreparedStatement {
+    // Métodos y atributos de la clase PreparedStatement
+}
+
+class ResultSet {
+    // Métodos y atributos de la clase ResultSet
+}
+
+class MessageDigest {
+    // Métodos y atributos de la clase MessageDigest
+}
+
+LoginApp --|> Scanner
+LoginApp --|> Connection
+LoginApp --|> DriverManager
+LoginApp --|> PreparedStatement
+LoginApp --|> ResultSet
+LoginApp --|> MessageDigest
+
+@enduml
+@startuml
+
+class LectorTXT {
+    -archivo: String
+    -totalLineas: int
+    -contraseña: String
+    +LectorTXT(archivo: String)
+    +LectorTXT(archivo: String, contraseña: String)
+    +leerConBarraDeCarga()
+    -contarLineas(archivo: String): int
+    -mostrarCarga(progreso: int, longitudLinea: int)
+    -mostrarDatos(datos: String[])
+    +leerArchivoYInsertarEnBaseDeDatos()
+    -insertarDatosSQL(conn: Connection, horarios: String, lunes: String, martes: String, miercoles: String, jueves: String, viernes: String)
+}
+
+class BufferedReader {
+    // Métodos y atributos de la clase BufferedReader
+}
+
+class FileReader {
+    // Métodos y atributos de la clase FileReader
+}
+
+class Connection {
+    // Métodos y atributos de la clase Connection
+}
+
+class DriverManager {
+    // Métodos y atributos de la clase DriverManager
+}
+
+class PreparedStatement {
+    // Métodos y atributos de la clase PreparedStatement
+}
+
+@enduml
+@startuml
+
+class insertarDatos {
+    +insertarDatosSQL(horarios: String, lunes: String, martes: String, miercoles: String, jueves: String, viernes: String)
+}
+
+class Connection {
+    // Métodos y atributos de la clase Connection
+}
+
+class DriverManager {
+    // Métodos y atributos de la clase DriverManager
+}
+
+class PreparedStatement {
+    // Métodos y atributos de la clase PreparedStatement
+}
+
+@enduml
+Formato Caseuse de la aplicacion
+@startuml
+
+left to right direction
+skinparam packageStyle rectangle
+
+actor Usuario as U
+rectangle "Splex App" {
+  U -- (Iniciar Sesión)
+  U -- (Leer Datos)
+  U -- (Insertar Datos)
+}
+
+rectangle "Base de Datos" {
+  (Consultar Datos)
+}
+
+U --> (Iniciar Sesión)
+(Leer Datos) --> (Consultar Datos): <<include>>
+(Insertar Datos) --> (Consultar Datos): <<include>>
+
+@enduml

@@ -1,0 +1,1 @@
+El error reside en las rutas relativas, al cambiarlas de absolutas, genera un problema con el jdbc

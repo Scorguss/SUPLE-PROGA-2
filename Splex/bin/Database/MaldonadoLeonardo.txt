@@ -1,0 +1,12 @@
+
+ID | GEOPOSICION | Lunes | Martes | Miércoles | Jueves | Viernes | Tipo Arsenal
+1  | 01-Coord   | 01-02 |        |           |        |         | a
+2  | 02-Coord   |       | 02-04  |           |        |         | ab
+3  | 03-Coord   |       |        | 03-06     |        |         | abc
+4  | 04-Coord   |       |        |           | 04-08  |         | abed
+5  | 05-Coord   |       |        |           |        | 05-10   | abcdt
+6  | 06-Coord   |       |        |           | 04-08  |         | abcdt
+7  | 07-Coord   |       |        | 03-06     |        |         | abcd
+8  | 08-Coord   |       | 02-04  |           |        |         | abc
+9  | 09-Coord   | 01-02 |        |           |        |         | ab
+10 | 00-Coord   |       |        |           |        |         | a

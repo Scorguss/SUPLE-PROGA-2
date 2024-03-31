@@ -1,0 +1,11 @@
+;GEOPOSICION;Lunes;Martes;Miercoles;Jueves;Viernes; Tipo Arsenal
+1;01-Coord North;01-02;;;;;a
+2;02-Coord East ;;02-04;;;;ab
+3;03-Coord_North;;;03-06;;;abc
+4;04-Coord East;;;;04-08;;abed
+5;05-Coord _North;;;;;05-10;abcdt
+6;06-Coord_East;;;;04-08;;abcdt
+7;07-Coord_North;;;03-06;;;abcd
+8;08-Coord East ;;02-04;;;;abc
+9;09-Coord_North;01-02;;;;;ab
+10;00-Coord _South;;;;;;a
